@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="sk">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<TITLE>Liturgický kalendár - presmerovanie na aktuálny deň</TITLE>
+<LINK REV="MADE" HREF="mailto:matus.brilla+lc@gmail.com" />
+<META NAME="AUTHOR" CONTENT="Ing. Matúš BRILLA" />
+<META NAME="KEYWORDS" CONTENT="Liturgický kalendár, Liturgia, kalendár, Direktórium, Katolícka, Rímskokatolícka, Cirkev, katolík, Liturgický kalendár - rok 2024" />
+<META NAME="DESCRIPTION" CONTENT="Liturgický kalendár - dnes" />
+
+<link rel="stylesheet" type="text/css" href="lc.css" />
+<BASE />
+<script type="text/javascript" src="lc-offline.js"></script>
+<script type='text/javascript'>
+function onload() {
+  try {
+    [ref, datum] = dnes();
+    document.write("<a href='" + ref + "' title='Dnes' class='fDb'>Dnes - " + datum + "</a>");
+    //debugger;
+    window.location = ref+".html";
+  } catch (error) {
+    console.error(error);
+  }
+}
+</script>
+</HEAD>
+<body id='lc' class="home" onload="onload()">
+<script>init();</script>
+
+<noscript>
+<h3>Skript nie je možné vykonať,<br />
+preto nie je možné presmerovať na aktuálny deň.</h3>
+<h2>Na aktuálny deň musíte prejsť ručne!</h2>
+</noscript>
+<h1>2023</h1>
+<!-- <a href='2023-11.html' title='November 2023'>November</a></td></tr> -->
+<a href='2023-12.html' title='December 2023'>December</a></td></tr>
+<h1>2024</h1>
+<a href='2024-01.html' title='Január 2024'>Január</a></td></tr>
+<a href='2024-02.html' title='Február 2024'>Február</a></td></tr>
+<a href='2024-03.html' title='Marec 2024'>Marec</a></td></tr>
+<a href='2024-04.html' title='Apríl 2024'>Apríl</a></td></tr>
+<a href='2024-05.html' title='Máj 2024'>Máj</a></td></tr>
+<a href='2024-06.html' title='Jún 2024'>Jún</a></td></tr>
+<a href='2024-07.html' title='Júl 2024'>Júl</a></td></tr>
+<a href='2024-08.html' title='August 2024'>August</a></td></tr>
+<a href='2024-09.html' title='September 2024'>September</a></td></tr>
+<a href='2024-10.html' title='Október 2024'>Október</a></td></tr>
+<a href='2024-11.html' title='November 2024'>November</a></td></tr>
+<a href='2024-12.html' title='December 2024'>December</a></td></tr>
+</table>
+<p><br/></p>
+
+</BODY>
+</HTML>

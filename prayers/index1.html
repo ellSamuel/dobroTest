@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="sk">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<TITLE>Aktualny den</TITLE>
+<LINK REV="MADE" HREF="mailto:dobrovodsky@hotmail.com" />
+<META NAME="AUTHOR" CONTENT="Dominik Dobrovodsky" />
+<META NAME="KEYWORDS" CONTENT="Dobre rano otce" />
+<META NAME="DESCRIPTION" CONTENT="Dobre rano otce - dnes" />
+<link rel="stylesheet" type="text/css" href="lc.css" />
+<style type="text/css">
+h2.fDm { margin: 0; }
+</style>
+<BASE />
+</HEAD>
+<BODY>
+<center class="dkc">
+<script type='text/javascript'>
+var dnes = new Date(),
+d = dnes.getDate(),
+m = dnes.getMonth()+1,
+r = dnes.getFullYear();
+if (m < 10) m = "0" + m;
+if (d < 10) d = "0" + d;
+var ref = m+"-"+d+".html",
+datum = d+"."+m+"."+r;
+document.write("<tr><td><a href='" + ref + "' title='Dnes' class='fDb'>Dnes - " + datum + "</a><br /></td></tr>");
+window.location = ref;
+</script>
+<noscript>
+<h3>Skript nie je možné vykonať,<br />
+preto nie je možné presmerovať na aktuálny deň.</h3>
+<h2>Na aktuálny deň musíte prejsť ručne!</h2>
+</noscript>
+</BODY>
+</HTML>

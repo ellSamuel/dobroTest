@@ -1,0 +1,191 @@
+@charset "UTF-8";
+
+:root {
+  --farba-lit-biela: white;
+  --farba-lit-zelena: green;
+  --farba-lit-fialova: purple;
+  --farba-lit-cervena: red;
+  --farba-lit-ruzova: pink;
+  --farba-lit-zlata: gold;
+  --farba-lit-cierna: black;
+
+  --farba-biela: white;
+  --farba-seda: gray;
+  --farba-tmava: #222;
+  --farba-cierna: black;
+  --farba-cervena: red;
+  --farba-ctrl-seda: lightgray; /* ovládacie prvky  a  grafika */
+  --farba-pozadie: var(--farba-biela);
+  --farba-pismo: var(--farba-cierna);
+  --farba-pismo-seda: gray;
+
+  /* farby slávenia */
+  --farba: #BBB;
+  --farba-n: #DDD;
+  --farba-p: #EEE;
+  --farba-i: #FFF8;
+  --farba-t-i: #AAA8;
+
+/* -internal-light-dark(rgb(239, 239, 239), rgb(59, 59, 59)); */
+
+
+  --farba-navBtn: #EEE;
+  --farba-navBtn-h: #DDD;
+  --farba-odkaz: #BBB;
+  --farba-navHeader: #EFE;
+  
+  --farba-gen: red;
+}
+
+
+.lsp {  /* ľubovoľná spomienka */
+  --farba: #77c;
+  --farba-n: #DDF;
+  --farba-p: #EEF;
+  /* --farba-i: #EEF; */
+  --farba-t-i: #BBF3;
+}
+.sp {   /* spomienka */
+  --farba: #55f;
+  --farba-n: #BBF;
+  --farba-p: #EEF;
+  /* --farba-i: #EEF; */
+  --farba-t-i: #99F3;
+}
+
+.lsv {  /* ľubovoľný sviatok */
+  --farba: #7d7;
+  --farba-n: #DFD;
+  --farba-p: #DFD;
+  /* --farbav-i: #DFD; */
+  --farba-t-i: #DFD3;
+}
+.sv {   /* sviatok */
+  --farba: #494;
+  --farba-n: #BEB;
+  --farba-p: #EFE;
+  /* --farba-i: #EFE; */
+  --farba-t-i: #8D83;
+}
+.sl {   /* slávnosť */
+  --farba: #F44;
+  --farba-n: #F99;
+  --farba-p: #FDD;
+  /* --farba-i: #FDD; */
+  --farba-t-i: #F883;
+}
+.ned, .wd7 {  /* nedeľa */
+  --farba: red;
+  --farba-n: #F66;
+  --farba-p: #FAA;
+  /* --farba-i: #FCC; */
+  --farba-t-i: #F003;
+}
+.psv {  /* prikázaný sviatok */
+  --farba: red;
+  --farba-n: #F66;
+  --farba-p: #FAA;
+  /* --farba-i: #FAA; */
+  --farba-t-i: #F003;
+}
+
+/*** Liturgické farby *** /
+.lcFARBA.V {
+  background-color: var(--farba-fialova);
+}
+*/
+
+
+
+/****************************************************************************/
+.lcDARK {
+  --farba-pozadie: var(--farba-tmava);
+  --farba-pismo: var(--farba-biela);
+  --farba-seda: gray;
+
+  /* farby slávenia */
+  --farba: #AAA;
+  --farba-n: #555;
+  --farba-p: #333;
+  --farba-i: #DDD;		/* input 	    (checkbox-icon) */
+  --farba-t-i: #FFF3;	/* text-input (checkbox-icon) */
+
+  --farba-ctrl-seda: var(--farba-seda);
+
+  --farba-navBtn: #666;
+  --farba-navBtn-h: #AAA;
+  --farba-odkaz: #888;
+  --farba-navHeader: #282;
+  /* --farba-gen: #0FF; */
+}
+.lcDARK .lsp {  /* ľubovoľná spomienka */
+  --farba: #99f;
+  --farba-n: #88f;
+  --farba-p: #334;
+  /* --farba-i: #EEF; */
+  --farba-t-i: #BBD3;
+}
+.lcDARK .sp {   /* spomienka */
+  --farba: #77f;
+  --farba-n: #55c;
+  --farba-p: #224;
+  /* --farba-i: #EEF; */
+  --farba-t-i: #99F3;
+}
+.lcDARK .sv {   /* sviatok */
+  --farba: #5A5;
+  --farba-n: #7B8;
+  --farba-p: #242;
+  /* --farba-i: #EFE; */
+  --farba-t-i: #8D83;
+}
+.lcDARK .sl {   /* slávnosť */
+  --farba: #F44;
+  --farba-n: #e66;
+  --farba-p: #322;
+  /* --farba-i: #FDD; */
+  --farba-t-i: #F883;
+}
+.lcDARK .ned,
+.lcDARK .wd7 {  /* nedeľa */
+  --farba: red;
+  --farba-n: #d33;
+  --farba-p: #422;
+  /* --farba-i: #FCC; */
+  --farba-t-i: #F003;
+}
+.lcDARK .psv {  /* prikázaný sviatok */
+  --farba: red;
+  --farba-n: #e66;
+  --farba-p: #522;
+  /* --farba-i: #FAA; */
+  --farba-t-i: #F003;
+}
+
+.lcDARK #links {
+  filter: invert(1);
+  color: var(--farba-pozadie);
+}
+
+/* .lcDARK .lcPREV,
+.lcDARK .lcNEXT {
+    filter: invert(1);
+} */
+
+
+.lcFARBA.W { --farba-lit: var(--farba-biela); --farba-lit-o: var(--farba-seda); --farba-lit-t: var(--farba-cierna); }
+.lcFARBA.G { --farba-lit: var(--farba-lit-zelena); --farba-lit-o: var(--farba-lit-zelena); --farba-lit-t: var(--farba-biela); }
+.lcFARBA.V { --farba-lit: var(--farba-lit-fialova); --farba-lit-o: var(--farba-lit-fialova); --farba-lit-t: var(--farba-biela); }
+.lcFARBA.R { --farba-lit: var(--farba-lit-cervena); --farba-lit-o: var(--farba-lit-cervena); --farba-lit-t: var(--farba-biela); }
+/* .lcFARBA.R { --farba-lit: var(--farba-lit-cervena); --farba-lit-o: var(--farba-lit-cervena); --farba-lit-t: var(--farba-cierna); } */
+.lcFARBA.P { --farba-lit: var(--farba-lit-ruzova); --farba-lit-o: var(--farba-lit-ruzova); --farba-lit-t: var(--farba-cierna); }
+.lcFARBA.GOLD { --farba-lit: var(--farba-lit-zlata); --farba-lit-o: var(--farba-lit-zlata); --farba-lit-t: var(--farba-cierna); }
+.lcFARBA.B { --farba-lit: var(--farba-lit-cierna); --farba-lit-o: var(--farba-lit-cierna); --farba-lit-t: var(--farba-biela); }
+
+
+
+.lcHEAD h2 .lcFARBA {
+  background-color: var(--farba-lit);
+  color: var(--farba-lit-t);
+  border: 1px solid var(--farba-lit-o);
+}

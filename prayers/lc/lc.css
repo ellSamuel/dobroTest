@@ -1,0 +1,671 @@
+@charset "UTF-8";
+@import 'lc-farby.css';
+
+:root {
+  --max-width-full: 40em;
+}
+/*
+:root {
+  --lit-farba-biela: white;
+  --lit-farba-zelena: green;
+  --lit-farba-fialova: purple;
+  --lit-farba-cervena: red;
+  --lit-farba-ruzova: pink;
+  --lit-farba-zlata: gold;
+  --lit-farba-cierna: black;
+
+  --farba-feria: #AAA;
+  --farba-feria-p: #CCC;
+  --farba-lsp: #DDDDFF;
+  --farba-lsp-p: #DDDDFF44;
+  --farba-sp: #BBBBFF;
+  --farba-sp-p: #BBBBFF44;
+  --farba-lsv: #DDFFDD;
+  --farba-lsv-p: #DDFFDD44;
+  --farba-sv: #BBFFBB;
+  --farba-sv-p: #BBFFBB44;
+  --farba-sl: #F88;
+  --farba-sl-p: #F884;
+  --farba-ned: red;
+  --farba-ned-p: #F00;  /* red * /
+  --farba-psv: red;
+  --farba-psv-p: #F004;
+
+  --farba-pozadie: white;
+  --farba-pismo: black;
+
+  --farba-cierna: black;
+  --farba-biela: white;
+  --farba-seda: gray;
+  --farba-svetlo-seda: #CCC;
+
+  --zoom: 100%;
+  --zoom1: calc( var(--zoom) / 100 );
+}
+*/
+html {
+  font-size: var(--zoom);
+  padding: 0 .5rem;
+}
+
+body {
+  max-width: var(--max-width-full);
+  margin: auto;
+  font-family: /*Helvetica, Arial,*/ sans-serif;
+
+  background-color: var(--farba-pozadie);
+  color: var(--farba-pismo);
+  line-height: 1.5;
+  /* padding: 0 .5rem; */
+  /* text-align: left; */
+}
+
+
+:root {
+  --hoverScale: 1;
+}
+
+.hsx {
+  --hoverScale: 100%;
+}
+.hs-105 {
+  --hoverScale: 105%;
+}
+.hs-110 {
+  --hoverScale: 110%;
+}
+.hs-120 {
+  --hoverScale: 120%;
+}
+.hvr-tr-chldrn-a a:hover,
+.hvr-tr-chldrn-a .h-as-a:hover,
+.hvr-tr-chldrn-x > *:hover,
+.hvr-tr-chldrn-lcDEN .lcDEN:hover,
+.hvr-tr:hover,
+html div#lc .h-tr-var {
+  color: var(--hoverColor);
+  transform: scale(var(--hoverScale, 1));
+}
+
+
+
+
+
+h1, h2, h3, h4, h5 {
+	margin: 2rem 0 .5rem 0;
+}
+/*
+.lc h1.datum {
+	text-align: center;
+	margin-top: 0;
+  /*background-color: white;* /
+  padding: .3rem;
+  /*margin: .5rem;* /
+}*/
+.lcWD, .lcND {  /* deň v týždni a meniny */
+	font-size: 70%;
+	color: var(--farba-seda);
+}
+a.lcMY {
+  display: inline-block;
+  background-color: var(--farba-pozadie);
+  --hoverScale: 1.1;
+}
+.lcMD:after {
+  content: '.';
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+
+a.lcPREV,
+a.lcNEXT {
+	display: block;
+	text-align: center;
+	vertical-align: middle;
+	/* font-size: 150%; */
+	background-color: var(--farba-ctrl-seda);
+  border: 1px solid var(--farba-pozadie);
+	color: var(--farba-cierna);
+	text-decoration: none;
+  padding: 0;
+  --hoverScale: 105%;
+}
+
+h1/*, .lcNAVIG*/ {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 5px;
+	font-size: 180%;
+  text-align: center;
+}
+h1.lcDENtitul .lcDATUM,
+h1.lcMESIACtitul .lcDATUM {
+  min-width: 80%;
+  font-size: 2rem;
+  margin: 0.3em 0;
+  flex-grow: 9;
+}
+h1.lcMESIACtitul button img {
+  width: 1.5rem;
+  height: 1.5rem;
+  margin: .3rem;
+  cursor: pointer;
+}
+a.lcPREV {
+  flex-grow: 1;
+  min-width: 30%;
+}
+a.lcNEXT {
+  flex-grow: 3;
+  min-width: 60%;
+}
+
+
+.lcRESPblock .lcRESP,
+.lcVPEblock .lcVPE {
+  font-style: italic;
+}
+
+/*.lcRESPblock span,*/
+.lcVPEblock span {
+  display: block;
+}
+
+
+#text .lcDEN .lcDENalt {
+  margin-bottom: 4em;
+}
+
+
+
+.lcHEAD,
+.lcBODY h3.lcSEKCIAtitul {
+  border-left-width: 1rem;
+  padding-left: .5em;
+  margin-top: 2em;
+}
+
+.lcBODY p.lcMOD,
+.lcBODY p.lcRESPblock,
+.lcBODY p.lcVPEblock {
+  margin: 2em 0 0 0;
+  border-left: .25rem solid var(--farba);
+  padding-left: .5em;
+}
+
+
+
+/****************** lcHEAD ****************/
+.lcHEAD {
+  border-inline-start: 0.5rem solid var(--farba);
+  /*border-width: .2rem;*/
+  padding-left: .5rem;
+  margin-bottom: 2rem;
+}
+
+.lcHEAD .lcGEN {
+  /* position: absolute; */
+  /*text-align: ;*/
+  background-color: #faa;
+  padding: .2em !important;
+  /* order: 1; */
+  float: right;
+}
+
+.lcHEAD h2 {
+  margin-top: 0;
+  /* margin-right: .5em; */
+  /* justify-content: space-between; */
+  /* display: flex; */
+  /* align-items: stretch; */
+  /* flex-wrap: wrap; */
+}
+.lcHEAD h2 .lcMOD,
+.lcHEAD .lcCITANIE .lcMOD {
+  font-weight: normal;
+  font-style: italic;
+}
+.lcHEAD .lcCITANIE .lcMOD {
+  margin: 0 .3em;
+}
+.lcHEAD .lcSEKCIA:first-child h3 {
+  margin-top: .5em;
+}
+.lcHEAD h3.lcSEKCIAtitul {
+  margin: 1rem 0 0.5rem 0;
+}
+h3.lcSEKCIAtitul::after {
+  content: ":";
+}
+.lcSEKCIAtelo {
+  padding-left: 1em;
+}
+
+.lcHEAD h2 div:first-child {
+  flex-grow: 10;
+}
+
+.lcHEAD h2 div {
+  padding: 0;
+  display: inline;
+}
+
+.lcHEAD h2 i.lcTYP {
+  display: block;
+  width: 100%;
+  margin-top: .2em;
+  font-size: 80%;
+  font-weight: normal;
+}
+
+.lcHEAD h2 span {
+  /* display: block; */
+}
+
+.lcHEAD h2 span.lcFARBA,
+.lcHEAD .lcGEN {
+  font-size: 1rem;
+  font-weight: normal;
+  padding: .01em .2em;
+  /* background-color: var(--farba-ctrl-seda); */
+  /* border-radius: 50%; */
+  /* width: 1.3em; */
+  height: 1.3em;
+  display: inline-block;
+  border: 1px solid;
+  text-align: center;
+  cursor: default;
+  /* vertical-align: top; */
+}
+
+.psv .lcHEAD .lcHEADinfo {
+  padding-bottom: .5em;
+}
+
+.lcHEAD .lcLINE div {
+  display: inline-block;
+}
+.lcHEAD .lcLINE p.lcTEXT {
+  display: inline;
+}
+
+.lcHEAD p.lcRESPblock,
+.lcHEAD p.lcVPEblock {
+  padding-left: 1em;
+}
+.lcCITANIE + .lcVPEblock,
+.lcCITANIE + .lcRESPblock {
+  margin-top: 0;
+  margin-bottom: 0;
+}
+
+.lcHEAD .lcGRP * {
+  /* display: inline; */
+  padding: 0;
+}
+
+.lcHEAD .lcGRP .lcCITANIE .lcRESPblock {
+  display: block;
+}
+
+.lcHEAD .lcCITANIE p {
+  margin: 0;
+}
+
+.lcHEAD div.lcGRP,
+.lcHEAD div.lcLINE {
+  margin-top: .5rem;
+  /* margin-left: 1.7em;
+  /* margin-bottom: .5rem;
+  padding-left: 0; */
+}
+
+.lcHEAD .lcCITANIE.lcZALM + .lcMOD,
+.lcHEAD .lcGRP .lcCITANIE {
+  display: block;
+}
+.lcHEAD div.lcGRP {
+  margin-left: 1rem;
+}
+.lcHEAD .lcGRP + .lcMOD {
+  margin: .2em 0;
+}
+
+.lcHEAD .lcCITANIE .lcSUR {
+  white-space: nowrap;
+  font-weight: bold;
+}
+
+
+@media only screen and (max-width: 30rem) {
+  .lcHEAD .lcCITANIE .lcSUR {
+    white-space: normal;
+  }
+}
+
+
+
+.lcNEXTalts {
+  margin: 1rem 0;
+}
+.lcNEXTalts > p {
+  margin-bottom: 0;
+  opacity: .7;
+}
+.lcNEXTalts a {
+  display: block;
+  width: fit-content;
+  max-width: min(100vw, var(--max-width-full));
+  overflow: hidden;
+  padding: 2px 0;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  text-decoration: none;
+  opacity: .7;
+}
+.lcNEXTalts span {
+  color: var(--farba-n);
+  transform: scale(2);
+  display: inline-block;
+  font-weight: bold;
+  margin: .1em .3em;
+}
+.lcNEXTalts a:hover {
+  text-decoration: underline;
+  opacity: 1;
+}
+.lcNEXTalts a:hover i {
+  color: var(--farba);
+}
+
+
+
+/********** BODY ( telo - výpis textov čítaní ) - čítania ************/
+
+.lcBODY p {
+  margin: .604rem 0;
+}
+
+.lcBODY .lcSEKCIAtitul { /* H3.lcSEKCIAtitul */
+  margin: 2.4rem 0 1rem 0;
+  padding-left: .5rem;
+  font-weight: bold;
+  font-size: 110%;
+}
+
+
+.lcBODY .lcCITANIE h4 {
+  display: flex;
+  flex-wrap: wrap;
+	font-size: 110%;
+}
+
+.lcBODY .lcCITANIE h4 span {
+  flex-grow: 3;
+  margin: .4em 0 0 .4em;
+  text-align: right;
+  font-size: 80%;
+  font-weight: normal;
+  color: var(--farba-pismo);
+}
+.lcBODY .lcCITANIE h4 span a {
+  font-weight: bold;
+}
+
+/* resp. a H4, alebo VPE a H4 v prípade ŽALMU / EVN... */
+.lcBODY .lcRESPblock,
+.lcBODY .lcVPEblock {
+  border-left-width: .2rem;
+  border-left-style: solid;
+	margin: 2rem 0 1rem/* calc(2rem / 2) */ 0;
+}
+.lcBODY .lcCITANIE .lcRESPblock,
+.lcBODY .lcCITANIE .lcVPEblock {
+  margin-top: 2rem;
+  margin-bottom: -1rem; /* calc( -2rem / 2 ) */
+}
+.lcRESPblock + .lcCITANIE > h4,
+.lcVPEblock + .lcCITANIE > h4 {
+  margin: .5rem 0;
+}
+.lcRESPblock + h4 {
+  color: var(--farba-seda);
+}
+
+.lcBODY h5 {
+	font-size: 100%;
+	font-style: italic;
+	font-weight: normal;
+	color: var(--farba-seda);
+}
+.lcBODY h5 var {
+  float: left;
+  padding: 0;
+	font-style: normal;
+	font-weight: normal;
+}
+.lcBODY .lcCITANIE > h4 + h5 {
+  margin-top: .2em;
+}
+
+.lcBODY .lcCITANIE p.info {
+  margin: 10px 0;
+  border: 1px dotted;
+  text-align: center;
+  text-indent: 0;
+  color:var(--farba-seda);
+}
+
+.lcBODY .lcCITANIE + .lcMOD {
+  display: block;
+  margin: 1.5em 0;
+  padding-left: .5em;
+  border-left-width: 2px;
+  /* border-color: inherit; */
+}
+
+.lcBODY .lcMOD,
+.lcBODY .lcTEXT {
+  color: var(--farba-seda);
+}
+
+.lcBODY .lcCITANIE > h4 + .lcTEXT.lcJOINprev,
+.lcBODY .lcCITANIE > h4 + .lcTEXT.lcJOINnext {
+  margin-bottom: -1.2rem;
+}
+
+/* Refrén žalmu */
+.lcCITANIE var {
+  margin-left: 1em;
+  font-weight: bold;
+  /* font-style: normal; */
+}
+
+/* Počuli sme ... */
+.dovetok {
+  padding-left: 2rem;
+  font-style: italic;
+}
+
+/* ******************************************* */
+/*                                             */
+/*             FAREBNE DELENIE                 */
+/*                                             */
+/* ******************************************* */
+
+.lcHEAD {
+  border-color: var(--farba);
+}
+
+.psv .lcHEAD {
+  border: .25rem solid var(--farba);
+  border-left-width: .75rem;
+}
+
+.lcHEAD h2 {
+  background-color: var(--farba-n);
+}
+
+.lcHEAD h2 {
+  margin-left: -.5rem;
+  padding: .5rem;
+  /* background-color-opacity: .3; */
+}
+
+.lcBODY .lcSEKCIAtitul {
+  border-left: .75rem solid var(--farba);
+}
+
+
+
+
+
+
+/********************************************************/
+
+.red {
+  background-color: red;
+  color: white;
+}
+
+.lcCITANIE h4 p.lcINFO {
+  display: inline;
+  padding-left: 2rem;
+  font-weight: normal;
+  font-size: 85%;
+}
+
+
+@media print {
+  .noPrint,
+  .lcNAVIG,
+  .lcPREV, .lcNEXT {
+    display: none;
+  }
+}
+
+
+
+/**************************/
+/**************************/
+
+.lcHEAD .grp {
+	margin-left: 0;
+}
+
+/* ///////////////// Liturgicke farby ///////////// */
+#lc .lcHEAD span.lcFARBA {
+	display: inline-block;
+	font-size: 90%;
+	font-family: monospace;
+	padding: 1px 5px 1px 5px /*!important*/;
+	margin: 0 4px 4px 4px;
+/*	border: 1px solid black; */
+	vertical-align: text-bottom;
+	border-radius: 3px;
+}
+
+#lc .W { background-color: white; color: black /*!important*/; }
+.G { background-color: green; color: white; }
+.V { background-color: purple; color: white; }
+.R { background-color: red; color: white; }
+#lc .P { background-color: #FFC0CB /*pink*/; color: black /*!important*/; }
+/*.GOLD { background-color: gold; color: black !important; }*/
+.B { background-color: black; color: white; }
+
+
+
+/********************************************************/
+
+
+
+.s-105 { --hoverScale: 105%; }
+.s-110 { --hoverScale: 110%; }
+.s-120 { --hoverScale: 120%; }
+.hvr-scl-chldrn-a a:hover,
+.hvr-scl-chldrn-a .h-as-a:hover,
+.hvr-scl-chldrn-lcDEN .lcDEN:hover,
+.hvr-scl:hover {
+  z-index: 99;
+  transform: scale( var( --hoverScale ));
+  border-color: var(--farba-pismo);
+}
+
+
+#offlineMenu {
+  margin-bottom: 1em;
+  display: flex;
+  position: sticky;
+  top: 0;
+  gap: .5em;
+  font-size: 100%;
+  z-index: 999;
+  /* justify-content: space-between; */
+}
+#lcFontSize {
+  opacity: .5;
+  text-align: center;
+  font-size: 100%;
+  width: 5em;
+}
+#offlineMenu button {
+  opacity: .5;
+  flex-grow: 1;
+  height: 2rem;
+  vertical-align: middle;
+  font-size: 1rem;
+  font-weight: bold;
+  /* display: block; */
+}
+#offlineMenu button:hover {
+  cursor: pointer;
+}
+#offlineMenu button:hover,
+#lcFontSize:hover {
+  opacity:.8;
+  color: var(--farba-cierna);
+}
+#lcFontSizeSmaller::first-letter {
+  font-size: 80%;
+}
+#lcFontSizeBigger::first-letter {
+  font-size: 120%;
+}
+
+
+/******* Home *********/
+body.home {
+  display: grid;
+  gap: .5em;
+}
+.home h2,
+.home h3 {
+  text-align: center;
+  margin:.2em;
+}
+.home a {
+  padding: .7em; border: 1px solid black;
+  text-align: center;
+}
+.home a:hover {
+  background-color: lightgray;
+}
+
+/******** Copyright ********/
+
+#lc #lcCalendar #copyright {
+  grid-area: 9 / 1 / 10 / span 8;
+  margin-top: 15vh;
+}
+#lc #copyright {
+  border-top: 1px solid var(--farba-pismo);
+  margin: 30vh 25% 0 25%;
+  padding: 0.5em;
+  font-size: 70%;
+  text-align: center;
+}

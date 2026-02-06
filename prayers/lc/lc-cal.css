@@ -1,0 +1,367 @@
+@charset "UTF-8";
+
+:root {
+  --den-titul-sticky-top: 1.2em;
+}
+
+
+/* #lcCalendar */
+
+#lcCalendar {
+  max-width: var(--max-width-full);
+}
+
+#lcCalendar h1.lcMESIACtitul {
+  grid-column-start: span 2;
+  font-size: 1.5rem;
+}
+
+#lcCalendar h1.lcMESIACtitul button {
+  background-color: var(--farba-ctrl-seda);
+  border: 1px solid var(--farba-pozadie);
+  align-self: center;
+}
+#lcCalendar h1.lcMESIACtitul > a {  /* prev / next */
+    display:flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#lcCalendar .lcDEN h1.lcDENtitul {
+  position: -webkit-sticky; /* Safari */
+  position: sticky;
+  top: var(--den-titul-sticky-top);
+  margin: .3em;
+  align-self: flex-start;
+}
+#lcCalendar h1.lcDENtitul .lcMY {
+    white-space: nowrap;
+}
+#lcCalendar h1.lcDENtitul .lcDATUM span {
+  flex-grow: 1;
+}
+
+#lcCalendar .lcDEN .lcDENalts {
+  display: flex;
+  flex-direction: column;
+  gap: .5em;
+}
+
+
+
+#lcCalendar .lcDEN .lcDENalt .lcHEAD {
+  margin: 0;
+}
+#lcCalendar .lcDEN:hover .lcDENalt .lcHEAD {
+  background-color: var(--farba-p);
+}
+
+
+#lcCalendar h2.lcWEEKnum {
+  font-size: 2rem;
+  margin-left: 15%;
+  color: var(--farba-pismo-seda);
+}
+
+#lcCalendar .lcWEEK {
+  grid-column-start: span 2;
+  display: grid;
+  grid-row-gap: 20px;
+}
+
+#lcCalendar .lcWEEK span.date {
+  white-space: nowrap;
+}
+
+#lcCalendar .lcDEN {
+  display: grid;
+  grid-template: auto / 20% 80%;
+  width: 100%;
+  border: 1px solid transparent;
+  background-color: var(--farba-pozadie);
+  padding-left: 0;
+}
+
+body:not(.lcTAB) #lcCalendar #lcCALrows,
+.lcTAB #lcCalendar #lcCALtab,
+#lcCalendar #lcWEEKdays,
+#lcCalendar a.lcDEN::before {
+  display: none;
+}
+
+
+x#lcCalendar .lcDEN.lcDNES {
+  border-width: 2px;
+  border-color: #bbb;
+}
+
+#lcCalendar .lcDEN h1 .lcDATUM {
+  position: -webkit-sticky;   /* Safari */
+  position: sticky;
+  padding: 0;
+  top: 4rem;
+}
+
+#lcCalendar a.lcDEN.psv {
+  border: .5rem solid var(--farba);
+  margin: -.5rem;
+}
+#lcCalendar .lcDEN:hover {
+  border-color: var(--farba-ctrl-seda);
+}
+#lcCalendar .lcDEN.ned:hover,
+#lcCalendar .lcDEN.psv:hover {
+  border-color: var(--farba-cervena);
+}
+
+#lcCalendar h1.lcDENtitul .lcMY {
+  font-size: 70%;
+}
+
+#lcCalendar h1.lcDENtitul div.lcDATUM span.lcND {
+  white-space: normal;
+  display: block;
+  line-height: 1.3;
+  margin-top: .5em;
+}
+#lcCalendar .lcDMY {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  
+  align-items: baseline;
+  justify-content: center;
+}
+
+body:not(.lcTAB) #lcCalendar .lcDEN h1.lcDENtitul {
+  margin-top: 0;
+}
+
+
+
+
+@media only screen and (max-width: 40rem /*640px*/) {
+  #lcCalendar {
+    --hoverScale: 102%, 105%; /* 102%, var(--hoverScale)  = .hs-105 */
+  }
+  #lcCalendar .lcDEN h1.lcDENtitul {
+    display: block;
+    margin: 0;
+    line-height: .7;
+  }
+  #lcCalendar .lcDEN.psv h1.lcDENtitul {
+    padding: 0 .5rem;
+  }
+
+  #lcCalendar h1.lcDENtitul div.lcDATUM {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: baseline;
+    column-gap: .3rem;
+    background-color: var(--farba-pozadie);
+  }
+
+  #lcCalendar .lcDEN {
+    display: block !important;
+  }
+
+  #lcCalendar h1.lcDENtitul span.lcWD {
+    flex-grow: 0;
+    text-align: left;
+  }
+
+  #lcCalendar h1.lcDENtitul .lcDMY {
+    display: block;
+    text-align: left;
+    margin-left: .3em;
+  }
+
+  #lcCalendar h1.lcDENtitul .lcDATUM span.lcMD {
+    text-align: center;
+  }
+
+  #lcCalendar h1.lcDENtitul .lcDATUM span.lcMY {
+    white-space: nowrap;
+  }
+
+  #lcCalendar .lcDEN h1.lcDENtitul .lcDATUM span.lcND {
+    text-align: right;
+    margin-right: 0;
+  }
+}
+
+
+
+
+/**************************************************/
+/****************** .lcTAB ************************/
+/**************************************************/
+
+body.lcTAB {
+  max-width: 30em;
+}
+.lcTAB #lcCalendar .lcDEN:nth-of-type(1).wd1 { grid-column-start: 2; }
+.lcTAB #lcCalendar .lcDEN:nth-of-type(1).wd2 { grid-column-start: 3; }
+.lcTAB #lcCalendar .lcDEN:nth-of-type(1).wd3 { grid-column-start: 4; }
+.lcTAB #lcCalendar .lcDEN:nth-of-type(1).wd4 { grid-column-start: 5; }
+.lcTAB #lcCalendar .lcDEN:nth-of-type(1).wd5 { grid-column-start: 6; }
+.lcTAB #lcCalendar .lcDEN:nth-of-type(1).wd6 { grid-column-start: 7; }
+.lcTAB #lcCalendar .lcDEN:nth-of-type(1).wd7 { grid-column-start: 8; }
+
+
+.lcTAB #lcCalendar .lcWEEK .lcWEEKnum span,
+.lcTAB #lcCalendar .lcDEN .lcDENalts,
+.lcTAB #lcCalendar .lcDEN .lcWD,
+.lcTAB #lcCalendar .lcDEN .lcMY,
+.lcTAB #lcCalendar .lcDEN .lcND {
+  display: none !important;
+}
+.lcTAB #lcCalendar #lcWEEKdays {
+  display: grid;
+  font-size: 1.2rem;
+}
+.lcTAB #lcCalendar #lcWEEKdays p {
+  margin-bottom: 0;
+}
+.lcTAB #lcCalendar {
+  --hoverScale: 120%;
+
+  grid-template-columns: repeat(8, minmax(0, 1fr));
+  grid-template-areas:
+      'm m m m m m m m'
+      'tyz po ut str stv pi so ne';
+  gap: 3px;
+  padding: 10px;
+}
+
+.lcTAB #lcCalendar .lcWEEKnum,
+.lcTAB #lcCalendar .lcDEN {
+  --farba-pozadie: var(--farba-n);
+  display: block;
+  border: var(--border-width-tabCal) solid transparent;
+  font-size: 1.5rem;
+  font-weight: bold;
+  text-align: center;
+  justify-content: center;
+  align-items: center;
+  margin: 0;
+}
+
+.lcTAB #lcCalendar .lcWEEKnum {
+  display: block;
+  font-weight: normal;
+  background-color: transparent;
+  font-weight:400;
+  color: var(--farba-pismo);
+}
+
+.lcTAB #lcCalendar h1 {
+  --hoveScale: 105%;
+  grid-area: 1 / span 8;
+  margin: 0;
+}
+.lcTAB #lcCalendar .lcWEEK {
+  display: grid;
+  grid-template-areas: 'tyz po ut str stv pi so ne';
+  grid-area: 1 / 1;
+  grid-template-columns: 1fr repeat(7,1fr);
+  align-items: baseline;
+  justify-items: center;
+  gap: .2rem;
+  margin-bottom: .2rem;
+}
+
+
+.lcTAB #lcCalendar h1.lcDENtitul,
+.lcTAB #lcCalendar .lcWEEKnum {
+  font-size: 1.5rem;
+  line-height: 1;
+}
+
+
+.lcTAB #lcCalendar {
+  max-width: var(--max-width-full);
+}
+
+.lcTAB #lcCalendar h1.lcMESIACtitul {
+  grid-column-start: span 2;
+  font-size: 1.2rem;
+}
+
+.lcTAB #lcCalendar .lcDEN h1 span {
+  display: block;
+}
+
+
+.lcTAB #lcCalendar h2.lcWEEKnum {
+  font-size: 2rem;
+  margin-left: 15%;
+  color: var(--farba-pismo-seda);
+  font-size: 150%;
+}
+
+.lcTAB #lcCalendar .lcWEEK span.date {
+  white-space: nowrap;
+}
+
+.lcTAB #lcCalendar .lcDEN {
+  display: grid;
+  grid-template: auto / 20% 80%;
+  width: 100%;
+  border: 1px solid transparent;
+  padding-left: 0;
+}
+.lcTAB #lcCalendar .lcMD:after,
+.lcTAB #lcCalendar a.lcDEN::before {
+  display: none;
+}
+
+
+.lcTAB #lcCalendar .lcDEN:hover {
+  border-color: var(--farba);
+}
+
+.lcTAB #lcCalendar h1.lcDENtitul .lcDENtitul .lcMY {
+  padding: 0 .3rem;
+}
+
+.lcTAB #lcCalendar h1.lcDENtitul .lcDMY {
+  margin-left: 0;
+}
+
+.lc-lcTAB h1.lcDENtitul div.lcDATUM span.lcND {
+  white-space: normal;
+}
+
+.lcTAB #lcCalendar .lcDEN .lcDATUM {
+  padding: 0;
+  font-size: 1.5rem;
+}
+.lcTAB #lcCalendar a.lcDEN.psv,
+.lcTAB #lcCalendar a.lcDEN.lcDNES {
+  z-index: 9;
+}
+
+.lcTAB #lcCalendar a.lcDEN.lcDNES {
+  transform: scale(110%);
+  border: 2px solid var(--farba);
+}
+
+.lcTAB #lcCalendar a.lcDEN.lcDNES:hover {
+  transform: scale(130%);
+}
+
+.lcTAB #lcCalendar a.lcDEN.lcDNES {
+  margin: -.3rem;
+  padding: 0;
+}
+
+.lcTAB #lcCalendar a.lcDEN:hover {
+  border: 2px solid var(--farba);
+  z-index: 99;
+}
+
+.lcTAB #lcCalendar .lcGEN .lcMD {
+  opacity: .7;
+}
+

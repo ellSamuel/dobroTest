@@ -1,0 +1,714 @@
+/* OKRAJE stranky */
+body {
+  margin: 0;
+  padding: 1px;   /* pre uplne odstranenie okrajov stranky dat na nulu! */
+}
+/* maximalna sirka stranky */
+.dkc > * {
+  max-width: 50rem;
+}
+/* riadkovanie */
+html {
+  line-height: 1.5;
+}
+
+
+/*** VELKOST PISMA ***/
+/* .dkc { font-size: 14pt; } */
+
+/* Zakladny text */
+.dkc body,
+.dkc p,
+.dkc table { font-size: 100%; }
+
+/* NADPISY - 1. riadok - zvacsa datum */
+.dkc h1 { font-size: 140%; }
+/* zmensene - meniny, ... */
+.dkc .mini { font-size: 70%; }
+
+/* Liturgicky nazov dna */
+.dkc h3 { font-size: 120%; }
+/* typ - sviatok/slavnost/spom... */
+.dkc h3 i { font-size: 90%; }
+
+/* Spis a suradnice p#E9931A vypisom citania */
+.dkc h4 { font-size: 100%; }
+
+/* Titul/Nazov citania */
+.dkc h5 { font-size: 100%; display: block; }
+/* ak ho nechcete zobrazit zmente 'block' na 'none'. */
+
+/*************************************************************/
+/*************************************************************/
+/*************************************************************/
+
+
+/* links.css */
+a {
+	text-decoration: none;
+	color: inherit;
+}
+/*a:link {
+	color: #000080;
+}
+a:hover {
+	color: #FF0000;
+}
+*/
+/* looks.css */
+.dkc,
+.dkc table,
+.dkc p {
+	font-family: tahoma, verdana, arial;
+}
+.ft,
+.fOb,
+.fOg,
+.fDt,
+.fDm,
+.fDs,
+.fDb {
+	padding: 1px;
+	padding-left: 3px;
+	margin-top: 2px;
+	margin-bottom: 3px;
+}
+.fOb {
+	background-color: #E4E0C9;
+	border: 1px solid #E9931A;
+/*	margin-left: -6px; */
+}
+.fOg {
+	background-color: #F4F2F3;
+	border: 1px solid #DDCACC;
+}
+.ft,
+.fDt {
+	background-color: #E9931A;
+	border: 1px solid #A3868A;
+	color: #FFFFFF;
+}
+.fDt {
+/*c	border-left-width: 10px; */
+}
+.fDm {
+	background-color: #FFFFFF;
+/*c	border-left: 10px solid #A35761;
+	border-top: 1px solid #D4C2C2;
+	border-bottom: 1px solid #D4C2C2; */
+	color: white;
+}
+.fDs {
+	background-color: #E9931A;
+	border-color: red;
+	border-left: 4px solid #E9931A; 
+	border-right: 4px solid #E9931A; 
+	color: #FFFFFF;
+}
+.fDb {
+	background-color: #E1EAFC;
+	border: 1px solid #016EFF;
+/*c	border-left-width: 10px; */
+	color: #772C35;
+}
+
+
+/*****************************/
+.lc {
+/*  text-align: center;  /* nie všade funguje, preto je aj v php/html vložené <center> : -) */
+  margin: 0;
+}
+.lc h1 {
+  margin: 0;
+}
+div.lc,
+table.lc {
+  max-width: 750px;
+/*  margin-bottom: 10%;*/
+}
+.lc td.aTop {
+  vertical-align: top;
+}
+.lc .lc_alt .lc_vypis_citani .dkc_vypis {
+  padding: 5px;
+}
+.lc .lc_alt .lc_vypis_citani .dkc_vypis .lc_citanie {
+  margin-bottom: 8px;
+}
+.lc .lc_alt .lc_vypis_citani .dkc_vypis .lc_citanie div {  /* Zalmy */
+/*  margin-left: 2em; */
+}
+.lc .lc_alt .lc_vypis_citani .dkc_vypis .lc_citanie div var {  /* Refreny v zalmoch */
+  font-weight: bold;
+  font-style: normal;
+/*  margin-left: 1em; */
+}
+.lc .lc_alt .lc_vypis_citani .dkc_vypis .lc_citanie div var:before {
+  content: " - ";
+}
+.lc .lc_head_info div.lc_group.lc_memo label:after {
+  content: ":";
+}
+.lc .lc_alt .lc_vypis_citani .dkc_vypis h5 {
+  color: #FFFFFF;
+  /* font-size: 10pt; */
+  font-style: italic;
+  font-weight: normal;
+  font-variant: normal;
+  text-align: center;
+  margin: 5px;
+}
+.lc .lc_alt .lc_vypis_citani .dkc_vypis h5:first-child {
+  margin-top: 0;
+}
+.lc .lc_alt .lc_vypis_citani .dkc_vypis h5 var {
+  float: left;
+  font-style: normal;
+  margin-right: 1em;
+}
+.lc .lc_alt .lc_vypis_citani .dkc_vypis p {
+  text-align: justify;
+  text-indent: 1em;
+  margin: 0;
+  margin-bottom: 2px;
+}
+.lc .lc_alt .lc_vypis_citani .dkc_vypis p:first-child,
+.lc .lc_alt .lc_vypis_citani .dkc_vypis h5 + p {
+  text-indent: 0;
+}
+.lc .lc_alt .lc_vypis_citani .dkc_vypis p.info {
+  text-align: center;
+  text-indent: 0;
+  margin: 10px;
+  border-style: dotted;
+}
+.lc .lc_alt .lc_vypis_citani .dkc_vypis .sekvencia p {
+  white-space: pre;
+  text-indent: 0 !important;
+  margin-bottom: 3px;
+}
+
+.lc .lc_den.prn_next_page {
+  margin-bottom: 1em !important;
+}
+.lc.full .lc_alt {
+  margin-bottom: 1em;
+}
+
+.lc_den .lc_top { /*, div.colMesiac h5 {*/
+  color: #000080;
+  text-align: center;
+  font-style: normal;
+  /* font-size: 14pt; */
+  font-family: "verdana";
+  font-weight: normal;
+  margin-top: 0 0 3px 0;
+}
+.lc_head,
+.lc_head a {
+  color: white;
+}
+.lc .lc_den .lc_head.fDm {
+  /* font-size: 9pt; */
+  font-weight: normal;
+  text-align: left;
+  padding: 3px;
+  padding-left: 10px;
+  background-color: #E9931A !important;
+}
+.lc .lc_head input {
+  margin-right: 5px;
+}
+.lc .lc_den .lc_vypis_citani.fDs,
+.lc .lc_tab_col.input_group.fDs {
+  padding-top: 0;
+  padding-bottom: 0;
+  text-align: left;
+}
+.lc .lc_tab_col {
+  margin: 0 0 0 3px;
+  border-top: 1px solid;
+  border-right: 1px solid;
+  border-bottom: 1px solid;
+}
+.lc.full .lc_den .lc_head {
+  color: white !important;
+}
+.lc .lc_head h3 {
+  /* font-size: 11pt; */
+  text-align: left;
+  text-decoration: none;
+  text-transform: none;
+  margin: 0;
+}
+.lc .lc_head h3 i {
+  display: block;
+  /* font-size: 10pt; */
+  font-style: normal;
+  font-weight: normal;
+  margin-left: 38px;
+  margin-top: 2px;
+}
+.lc .lc_head .lc_head_info {
+  font-weight: normal;
+  text-align: left;
+  margin-top: 6px;
+/*  padding-left: 30px; */
+  padding-right: 5px;
+/*  line-height: 1.45em;*/
+}
+
+#lc_body_cell .lc_den .lc_head.psv {
+  border-width: 3px 3px 3px 10px;
+  border-style: solid;
+}
+
+/********** LISTOVANIE ***************/
+/*** pri titule ***/
+.lcNAVIG {
+    display: flex;
+}
+.lc_prev,
+.lc_next {
+  white-space: nowrap;
+  flex-grow: 1;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.lc_prev {
+    background-image: url(prev-bk.png);
+}
+
+.lc_next {
+    background-image: url(next-bk.png);
+}
+
+
+/************** Tabulkovy vypis *************************************/
+.lc_tab {
+  margin-bottom: 10em;
+}
+.lc_tab th,
+.lc_tab td {
+  text-align: center;
+  vertical-align: middle;
+  width: 22px;
+}
+.lc_tab .lc_tab_info th {
+  padding: 0 0 4px 0;
+}
+.lc_tab .lc_tab_info th h1 a img{
+  margin: 3px 0 -3px 8px;
+}
+.lc_tab td a {
+  border: 1px solid transparent;
+  display: block;
+  padding: 6px;
+  border-radius: 8px;
+}
+.lc_tab td a.generate hr {
+  position: absolute;
+  background-color: #E9931A;
+  margin: 0 -4px -9px 1.2em;
+  width: 7px;
+  height: 7px;
+  border: 1px solid #E9931A;
+}
+.lc_tab .lc_tab_week th b {
+  display: block;
+/*  padding: .2em; */
+  margin-right: .2em;
+}
+.lc_tab td a.psv,
+.lc_tab td a.now {
+  border: 3px solid;
+  padding: 2px;
+}
+.lc_tab td a.psv {
+  border-color: #E9931A !important;
+}
+.lc_tab td a.now {
+  border-color: black !important;
+}
+.lc_tab td a.psv:hover,
+.lc_tab td a.now:hover {
+  border: 2px solid;
+  padding: 3px;
+}
+.lc_tab td a:hover {
+  color: inherit;
+  border-color: #016EFF;
+}
+.lc_tab .lc_tab_head th {
+  padding: 4px;
+}
+
+/* ******************************************* */
+/*                                             */
+/*             FAREBNE DELENIE                 */
+/*                                             */
+/* ******************************************* */
+
+.ned {
+  font-weight: bold !important;
+  background-color: ##E9931A !important;
+}
+.small {
+  background-color: transparent;
+  height: 3px;
+}
+
+/* ******************************************* */
+
+.lsp  { background-color: #DDDDFF !important; }  /* lubovolna spomienka */
+.sp  { background-color: #BBBBFF !important; }  /* spomienka */
+.lsv  { background-color: #DDFFDD !important; }  /* lubovolny sviatok */
+.sv  { background-color: #BBFFBB !important; }  /* sviatok */
+.sl  { background-color: #FFBBBB !important; }  /* slavnost */
+.psv { border-color: #E9931A !important; }
+
+/*.lsp, .lsv, .sp,*/ .sv, .sl, /*.now,*/ .ned
+  { font-weight: bold !important; }  /* spolocne nastavenia */
+
+.lsp a, .lsv a, .sp a, .sv a, .sl a, .ned a
+  { color: black; }  /* odkazy */
+
+/* ******************************************* */
+
+.mini {
+  margin-top: 0.5em;
+  /* font-size: 8pt; */
+  font-weight: normal;
+}
+.pre {
+  white-space: pre;
+}
+
+.lc .biblia {
+  text-align: left;
+}
+.lc .biblia table.blok {
+  width: auto;
+}
+
+/*
+--------------- DOPLNENÉ v novej verzii ----------------
+*/
+h3 .lc_mod {
+  /* font-size: 80%; */
+  font-weight: normal;
+}
+.inline h3 .lc_mod {
+  margin-left: 3px;
+  margin-right: 3px;
+}
+
+.mod,
+.lc_mod {
+  font-style: italic;
+}
+.lc_vpe,
+.lc_refblock,
+.lc_vpeblock {
+  display: block;
+  margin-left: 25px;
+}
+.lc_vpeblock .lc_vpe {
+  margin-left: 15px;
+}
+.dkc_direct_pre .lc_mod,
+.dkc_direct_pre .lc_vpe,
+.dkc_direct_pre .lc_ref {
+  color: gray;  /* #016EFF; */
+}
+.dkc_direct_pre .lc_refblock,
+.dkc_direct_pre .lc_vpeblock {
+  padding: 4px;
+  margin-left: 5px;
+  margin-bottom: 5px;
+}
+.dkc_vypis .dkc_direct_pre {
+  margin-bottom: 7px;
+}
+.dkc_vypis .dkc_direct_pre .lc_refblock,
+.dkc_vypis .dkc_direct_pre .lc_vpeblock {
+  margin: 0;
+}
+span.lc_vpe,
+span.lc_ref {  /* na tmavom podklade */ 
+  color: #DDDDBB;
+}
+span.block {
+  display: block;
+}
+.lc_head_info div.input_group {
+  margin-top: 4px;
+}
+div.lc_head_info div.lc_memo {
+  color: #E4E0C9;
+  /* font-size: 120%; */
+  font-weight: bold;
+  margin-left: -10px !important;
+}
+div.lc_memo.inline {
+  font-weight: normal;
+  display: inline;
+  margin-left: 0 !important;
+}
+.lc_mod.block {
+  margin: 3px;
+/*  margin-left: 2em; */
+}
+/* ------------------------ INLINE zobrazenie ------------ */
+.inline .lc_head h3 div {
+  display: inline !important;
+}
+.inline .lc_head h3 i {
+  display: inline !important;
+/*  margin-left: 1em; */
+}
+
+.inline .lc_head_info div,
+.inline .lc_head_info span {
+  display: inline !important;
+  margin: 0;
+  padding: 0;
+  border: 0;
+}
+.inline .lc_head_info div.input_group {
+  display: block !important;
+  margin-top: 4px;
+}
+.inline .lc_head_info div.lc_group.lc_memo:before,
+.inline .lc_head_info div.lc_group.lc_memo:after {
+  content: "";
+}
+.inline .lc_head_info .lc_refblock:before,
+.inline .lc_head_info .lc_vpeblock:before {
+  content: " ~ ";
+}
+.inline .lc_head_info .lc_group:after {
+  content: "; ";
+}
+.inline .lc_head_info div.lc_memo:before {
+  content: "[ ";
+}
+.inline .lc_head_info div.lc_memo:after {
+  content: " ]";
+}
+/* ----------------------- onlyName zobrazenie ------------ */
+.onlyName .lc_head .lc_head_info {
+  display: none;
+}
+.onlyName .lc_head h5 i {
+  margin-bottom: 0 !important;
+}
+/* -------------------------------------------------------- */
+.nodisp {
+  display: none;
+}
+
+#head_disp {
+/*  color: white; */
+  float: right;
+  margin-left: 5px;
+  margin-bottom: 2px;
+/*  margin-bottom: -1.8em;
+/*  position: absolute; */
+}
+.full_width {
+  width: 100%;
+}
+.full_size {
+  width: 100%;
+  height: 100%;
+}
+.float_r {
+  float: right;
+}
+.float_l {
+  float: left;
+}
+
+.clearLine {
+  clear: both;
+  height: 0;
+  border: 0;
+  margin: 0;
+}
+
+
+.dkc_head {
+  margin-left: -6px;
+  margin-right: -2px;
+}
+
+.kontextInfo {
+  font-weight: bold;
+  padding-left: 0.7em;
+}
+
+
+.input_group.close div.lc_group {
+  display: none !important;
+}
+.input_group.close div.lc_group.lc_memo {
+  display: inherit !important;
+}
+
+#lc_source_info {
+  /* font-size: 9pt; */
+  text-align: center;
+  margin-bottom: 5px;
+  margin-top: 200px;
+}
+#copyright,
+#lc_source_info {
+  max-width: 740px;
+}
+
+div.generate {
+  display: block;
+  float: right;
+  font-weight: bold;
+  color: #E9931A;
+  border: 1px solid #E9931A;
+  padding: 1px 3px 2px 3px !important; 
+  cursor: default;
+  background-color: white;
+  border-radius: 3px;
+  opacity: .8;
+}
+div.generate:hover {
+  opacity: 1;
+}
+
+/* ///////////////// Liturgicke farby ///////////// */
+.lc_head span.lc_farba {
+  display: inline-block;
+  font-size: 90%;
+  font-family: monospace;
+  padding: 1px 4px 1px 4px !important; 
+  margin: 0 .5em 4px .5em;
+  border: 1px solid black;
+  vertical-align: middle;
+  border-radius: 3px;
+}
+.W { background-color: white; }   .W:before { color: black !important; content: "B"; }
+.G { background-color: green; }   .G:before { color: white; content: "Z"; }
+.V { background-color: purple; }  .V:before { color: white; content: "F"; }
+.R { background-color: #E9931A; }     .R:before { color: white; content: "Č"; }
+.P { background-color: pink; }    .P:before { color: black !important; content: "R"; }
+.GOLD { background-color: gold; } .GOLD:before { color: black !important; content: "Zl"; }
+.B { background-color: black; }   .B:before { color: white; content: "Či"; }
+
+/* ///////////////////////////////////////////////// */
+
+
+
+@media print {
+  * {
+    color: black !important;
+    background-color: white !important;
+    border-width: 1 !important;
+  }
+  .lc .biblia {
+    page-break-inside: avoid !important;
+  }
+  table.lc {
+    width: 100%;
+    margin: 0;
+  }
+  .noPrint {
+    display: none !important;
+    width: 0;
+  }
+
+
+  #lc_source_info {
+    margin-top: 0;
+  }
+  .input_group.close.noPrint div.lc_group.lc_memo {
+    display: none !important;
+  }
+  input,
+  button,
+  .lc_prev,
+  .lc_next {
+    display: none;
+  }
+}
+
+
+/* /////////////////////////////////////////////////// */
+#rok {
+	width: 50%;
+  text-align: center;
+}
+#rok a {
+  font-weight: bold;
+  display: block;
+  width: auto;
+  padding: 5px;
+  margin-top: 4px;
+}
+
+
+
+/* ////////////////// NOCNY REZIM //////////////////// */
+.noc {
+  background-color: black;
+  /* border-color: black; */
+  color: white;
+}
+.noc h1 {
+  color: white;
+}
+.noc a {
+  color: white;
+}
+.noc .lc_prev {
+    background-image: url(prev-wh.png);
+}
+.noc .lc_next {
+    background-image: url(next-wh.png);
+}
+.noc .fOb {
+	background-color: black;
+	border-color: black;
+}
+.noc .fOg {
+	background-color: #290a16;
+	border-color: black;
+}
+.noc .ft,
+.noc .fDt {
+	background-color: #016EFF;
+	border-color: black;
+	color: #fee;
+}
+.noc .fDm {
+  background-color: black;
+	color: #fee;
+}
+.noc .fDs {
+	background-color: black;
+	color: #fee;
+}
+.noc .fDb {
+	background-color: #460b14;
+	border-color: black;
+	color: white;
+}
+.noc select {
+  background-color: #444;
+  color: white;
+}
+.noc .lc_tab .lsp,
+.noc .lc_tab .sp,
+.noc .lc_tab .sv,
+.noc .lc_tab .sl,
+.noc .lc_tab .ned {
+  color: black;
+}
