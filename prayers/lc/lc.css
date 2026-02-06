@@ -158,11 +158,11 @@ h1.lcMESIACtitul button img {
 }
 a.lcPREV {
   flex-grow: 1;
-  min-width: 30%;
+  min-width: 45%;
 }
 a.lcNEXT {
   flex-grow: 3;
-  min-width: 60%;
+  min-width: 20%;
 }
 
 

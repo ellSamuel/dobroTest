@@ -1,49 +1,54 @@
 <!DOCTYPE html>
-<html>
+<!-- Rebuilt: improved UX, responsive and accessible -->
+<html lang="sk">
   <head>
-    <meta http-equiv="content-type" content="text/html; charset=UTF-8">
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
     <title>Ranná modlitba</title>
-    <style>
-body {
-background-color: rgb(233, 147, 26)
-}
-</style> </head>
-  <body> <font face="verdana">
-      <div><big><big><b>Dobré ráno Otče</b></big></big></div>
-      <div><big><br>
-        </big></div>
-      <div><big>Klaniam sa Ti o Bože môj a milujem ťa z celého srdca. Ďakujem
-          Ti, že som tvojím dieťaťom, že som kresťanom a že si ma ochraňoval
-          túto noc. </big></div>
-      <div><big>Obetujem ti skutky dnešného dňa. Daj aby boli všetky podľa
-          tvojej svätej vôle a na tvoju väčšiu slávu. Chráň ma od hriechu a od
-          všetkého zlého.</big></div>
-      <div><big>Tvoja milosť nech je vždy so mnou a s mojimi drahými. Amen.</big></div>
-      <div><big><i>Otče náš... <br>
-          </i></big></div>
-      <div><big><i><br>
-          </i></big></div>
-    </font><font face="verdana"></font><font face="verdana">
-      <div><big><b>Ranná modlitba Jána XXIII.</b></big><br>
-        <big>Nebeský Otče, ďakujem ti, že som si odpočinul a opäť sa prebudil.
-          Je to tvoj dar.<br>
-          To, čo je mojou povinnosťou, chcem dnes od rána do večera plniť tak,
-          ako to robil tvoj jednorodený Syn: všade, kam prišiel, zanechal po
-          sebe len dobro.<br>
-          Každého, s kým sa stretnem, mi posielaš, aby som v ňom poznal svojho
-          brata. Vo všetkom, čo urobím a poviem, nech sa mi zjaví láska, ktorou
-          Kristus všetkých objíma.<br>
-          Nech mám pre každého dobré slovo, prv než sa s ním rozídem. Nech mám
-          cit pre druhých a myslím viac na nich ako na seba. Prosím ťa, daj, aby
-          som sa vždy ovládal; nech nie je zo mňa mrzutec, ale nech som ku
-          každému láskavý a srdečný.<br>
-          Nech vo mne zostane aj iskra humoru, ktorý je tak potrebný. Od
-          Ducha Svätého si vyprosujem tvoju milosť, aby mi k tomuto všetkému
-          pomáhala.<br>
-          A ešte jedno: Dovoľ, aby som prostredníctvom Panny Márie priviedol
-          každého aspoň o krôčik bližšie k tvojmu Synovi. Môj Bože, všetko pre
-          teba, s tebou a v tebe. <i><br>
-          </i></big></div>
-    </font>
+    <link rel="stylesheet" href="css/styles.css">
+  </head>
+  <body>
+    <div class="wrap">
+      <header>
+        <h1>Ranná modlitba</h1>
+        <div class="controls" role="toolbar" aria-label="Nástroje zobrazenia a navigácie">
+          <a href="index.html" class="ctrl" id="home" title="Domov">🏠</a>
+          <button class="ctrl" id="dec" title="Zmenšiť písmo">A-</button>
+          <button class="ctrl" id="reset" title="Obnoviť písmo">A</button>
+          <button class="ctrl" id="inc" title="Zväčšiť písmo">A+</button>
+          <button class="ctrl" id="contrast" title="Prepnúť vysoký kontrast">Kontrast</button>
+        </div>
+      </header>
+
+      <main>
+        <section class="card" id="content" tabindex="0">
+      
+          <article>
+            <section class="prayer-section" aria-labelledby="morning-title">
+              <h2 id="morning-title">Dobré ráno, Otče</h2>
+              <p>Klaniam sa Ti, o Bože môj, a milujem ťa z celého srdca. Ďakujem Ti, že som tvojím dieťaťom, že som kresťanom a že si ma ochraňoval túto noc.</p>
+              <p>Obetujem ti skutky dnešného dňa. Daj, aby boli všetky podľa tvojej svätej vôle a na tvoju väčšiu slávu. Chráň ma od hriechu a od všetkého zlého.</p>
+              <p>Tvoja milosť nech je vždy so mnou a s mojimi drahými. Amen.</p>
+              <p class="small"><em>Otče náš...</em></p>
+            </section>
+
+            <section class="prayer-section" aria-labelledby="john-title">
+              <h2 id="john-title">Ranná modlitba Jána XXIII.</h2>
+              <p>Nebeský Otče, ďakujem ti, že som si odpočinul a opäť sa prebudil. Je to tvoj dar. To, čo je mojou povinnosťou, chcem dnes od rána do večera plniť tak, ako to robil tvoj jednorodený Syn: všade, kam prišiel, zanechal po sebe len dobro.</p>
+              <p>Každého, s kým sa stretnem, mi posielaš, aby som v ňom poznal svojho brata. Vo všetkom, čo urobím a poviem, nech sa mi zjaví láska, ktorou Kristus všetkých objíma.</p>
+              <p>Nech mám pre každého dobré slovo, prv než sa s ním rozídem. Nech mám cit pre druhých a myslím viac na nich ako na seba. Prosím ťa, daj, aby som sa vždy ovládal; nech nie je zo mňa mrzutec, ale nech som ku každému láskavý a srdečný.</p>
+              <p>Nech vo mne zostane aj iskra humoru, ktorý je tak potrebný. Od Ducha Svätého si vyprosujem tvoju milosť, aby mi k tomuto všetkému pomáhala.</p>
+              <p>A ešte jedno: Dovoľ, aby som prostredníctvom Panny Márie priviedol každého aspoň o krôčik bližšie k tvojmu Synovi. Môj Bože, všetko pre teba, s tebou a v tebe.</p>
+            </section>
+          </article>
+
+          <footer>
+            <span class="small">© modlitby • Verzia: UX rebuild</span>
+          </footer>
+        </section>
+      </main>
+    </div>
+
+    <script src="js/script.js" defer></script>
   </body>
 </html>

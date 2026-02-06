@@ -5,11 +5,29 @@
     <link rel="icon" href="">
     <link rel="stylesheet" type="text/css" href="pray.css">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-
+    <style>
+      body { font-size: 30px; padding-top: 70px; }
+      body.large-text { font-size: 30px; }
+      body.small-text { font-size: 15px; }
+      p { font-size: 30px; }
+      .ctrl { font-size: 0.5em; padding: 10px 12px; }
+      .controls { position: fixed; top: 0; right: 0; left: 0; display: flex; justify-content: flex-end; gap: 10px; align-items: center; padding: 15px; background-color: #f5f5f5; border-bottom: 1px solid #ddd; z-index: 1000; }
+      .nav-link { display: block; padding: 15px; text-align: center; font-size: 30px; color: #0066cc; text-decoration: none; border-bottom: 1px solid #ddd; }
+      .nav-link:hover { background-color: #f0f0f0; }
+      header { text-align: center; padding: 20px 0; }
+      h1 { margin: 0; font-size: 36px; }
+    </style>
 </head>
-<div>
-  <h1>Nicejsko-carihradské vyznanie viery</h1>
+<body>
+	<div class="controls" role="toolbar" aria-label="Nástroje zobrazenia">
+	  <a href="index.html" class="ctrl" id="home" title="Domov">🏠</a>
+	  <button class="ctrl" id="dec" title="Zmenšiť písmo">A-</button>
+	  <button class="ctrl" id="reset" title="Obnoviť písmo">A</button>
+	  <button class="ctrl" id="inc" title="Zväčšiť písmo">A+</button>
+	  <button class="ctrl" id="contrast" title="Prepnúť vysoký kontrast">Kontrast</button>
+	</div>
+  <header>
+    <h1>Nicejsko-carihradské vyznanie viery</h1>
   <p>
   	Verím v jedného Boha, Otca všemohúceho, Stvoriteľa neba i zeme, sveta viditeľného i neviditeľného. <br>
 	Verím v jedného Pána Ježiša Krista, jednorodeného Syna Božieho, zrodeného z Otca pred všetkými vekmi;<br>
@@ -29,4 +47,37 @@
 	Amen.
    </p>
 </div>
+
+<script>
+  // Font size controls
+  const baseSize = 30;
+  let currentSize = baseSize;
+  // Find the paragraph containing the text
+  const allDivs = document.querySelectorAll('div');
+  let mainContent = null;
+  for (let div of allDivs) {
+    let para = div.querySelector('p');
+    if (para && para.innerText.includes('Verím')) {
+      mainContent = para;
+      break;
+    }
+  }
+  if (!mainContent) mainContent = document.querySelector('p');
+  
+  document.getElementById('inc').addEventListener('click', () => {
+    currentSize = Math.min(currentSize + 4, 40);
+    if (mainContent) mainContent.style.fontSize = currentSize + 'px';
+  });
+  
+  document.getElementById('dec').addEventListener('click', () => {
+    currentSize = Math.max(currentSize - 4, 12);
+    if (mainContent) mainContent.style.fontSize = currentSize + 'px';
+  });
+  
+  document.getElementById('reset').addEventListener('click', () => {
+    currentSize = baseSize;
+    if (mainContent) mainContent.style.fontSize = currentSize + 'px';
+  });
+</script>
+</body>
 </html>
